@@ -6,9 +6,9 @@ Testing Tools Used:
 -Acceptance test: Cucumber Java Selenium WebDriver  
 -Continuous Integration: Travis-CI  
 
-APIs used:
--OpenWeather API
--Google Places API
+APIs used:  
+-OpenWeather API  
+-Google Places API  
 
 == Set-up ==
 1. Install Java Development Kit 8: https://www.oracle.com/java/technologies/javase-jdk8-downloads.html
@@ -29,8 +29,8 @@ To run JUnit tests with coverage:
 We are using Eclipse's built-in coverage reporting tool for this.
 Expand src/test/java, right click the "csci310" package -> Coverage As -> JUnit Test
 
-To host your web app: 
-Please make sure to replace connector files with your personal API Key prior to running.
+To host your web app:  
+Please make sure to replace connector files with your personal API Key prior to running.  
 1) Go to "Run Configurations".  
 2) Click on the environment tab and ensure that the environment variable is the correct path to Weather.json file.  
    ie. Variable: GOOGLE_APPLICATION_CREDENTIALS  
