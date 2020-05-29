@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Analysis Page</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/analysis.css">
+  <link rel="stylesheet" href="css/login.css">
+
+  <!-- fontAwesome Icons -->
+  <script src="https://kit.fontawesome.com/5411719270.js" crossorigin="anonymous"></script>
+
+  <!-- photoCarousel code -->
+   <script>
+
+	   var activePhoto = 0;
+	   setInterval(nextPhoto, 3000);
+
+	   function nextPhoto() {
+		   	if (activePhoto == 4){
+		   		activePhoto = 0;
+		   	}
+		   	else{
+		   		activePhoto++;
+		   	}
+		   showPhoto(activePhoto);
+	   }
+
+	   function showPhoto(index) {
+	     var photos = document.getElementsByClassName("photos");
+	     var dots = document.getElementsByClassName("dot");
+	     activeIndex = index;
+	     var i;
+	     for (i = 0; i < photos.length; i++) {
+	         photos[i].style.display = "none";
+	         dots[i].className = dots[i].className.replace(" active1", "");
+	     }
+	     photos[index].style.display = "block";
+         dots[index].className += " active1";
+	   }
+
+   </script>
+
+
+</head>
+
+<body>
+  <span id = "tempType" class = "tempUnit" style = "display: none">F</span>
+
+  <div class="pageTitle">
+    <h1>Weather Analysis</h1>
+  </div>
+
+  <div class="mainContent">
+
+    <div class="container" id="favoriteCityListArea">
+      <h2>Favorite Cities</h2>
+      
+      <div id="favoriteCityList">
+
+      </div>
+
+      <div class="remove_and_slider">
+        <div class="send-button">
+          <input id="removeButton" type="button" value="Remove">
+        </div>
+        <div id="toggleTempSlider">
+          <a>C°</a>
+          <label class="switch" for="checkbox">
+            <input type="checkbox" id="checkbox">
+            <div class="slider round" id = "ccToggle"></div>
+          </label>
+          <a>F°</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="centralDisplay">
+
+      <div class="weatherWidget" id="weatherWidget">
+        <h1><span id="cityName">Los Angeles</span>, <span id="date">3/22/2020</span></h1>
+
+          <div id="weatherIconandTemp">
+            <div><img id = "weatherIcon" src="http://openweathermap.org/img/wn/10d@2x.png" alt=""></div>
+            <div><h2> <span id="tempValue" class = "tempValue">87</span> &#176 <span class = "tempUnit">F</span> </h2></div>
+          </div>
+        <h1><span id="weatherDescription">Sunny</span></h1>
+      </div>
+
+      <div class="weatherWidget" id="errorMessage">
+        <h1>
+          No weather data found.
+        </h1>
+      </div>
+
+      <div id = "forecastWidget" class="forecastWidget">
+
+      </div>
+
+    </div>
+
+    <div id = "imageGallery" class="container">
+        <div class="photos">
+          <image class ="photo"  id = "cityImage1" src = "https://hotelemc2.com/wp-content/uploads/2018/02/Why-Chicago-is-the-Best-City-in-the-World.png"></image>
+        </div>
+      <div class="photos">
+          <image class ="photo" id = "cityImage2" src = "https://media.timeout.com/images/105383118/1372/772/image.jpg"></image>
+        </div>
+      <div class="photos">
+          <image class ="photo" id = "cityImage3" src = "https://www.visittheusa.com/sites/default/files/styles/hero_m_1300x700/public/images/hero_media_image/2018-04/7d5ac2254f021e67620d0ed38f6a4e79.jpeg?itok=z44641fX"></image>
+        </div>
+      <div class="photos">
+          <image class ="photo" id = "cityImage4" src = "https://hotelemc2.com/wp-content/uploads/2018/02/Why-Chicago-is-the-Best-City-in-the-World.png"></image>
+        </div>
+      <div class="photos">
+          <image class ="photo" id = "cityImage5" src = "https://hotelemc2.com/wp-content/uploads/2018/02/Why-Chicago-is-the-Best-City-in-the-World.png"></image>
+        </div>
+
+        <div class = "dots" style="text-align:center">
+        <span class="dot" onclick="showPhoto(0)"></span>
+        <span class="dot" onclick="showPhoto(1)"></span>
+        <span class="dot" onclick="showPhoto(2)"></span>
+        <span class="dot" onclick="showPhoto(3)"></span>
+        <span class="dot" onclick="showPhoto(4)"></span>
+      </div>
+    </div>
+
+    <div id = "deleteModal" class="">
+      <h3>Are you sure you want to delete <span id="deleteTarget">{cityName}</span> from Favorites?</h3>
+
+      <div class="buttons">
+        <div id ="yesbutton" class="yesbutton">
+          yes
+        </div>
+        <div id ="cancelbutton" class="cancelbutton">
+          cancel
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+
+
+  <div class="nav">
+
+    <div id="homeButton" class="navbutton">
+      <i class="fas fa-home"></i>
+      <h3>Home</h3>
+    </div>
+
+    <div id="vacationButton" class="navbutton">
+      <i class="fas fa-umbrella-beach"></i>
+      <h3>Vacation</h3>
+    </div>
+
+    <div id="activityButton" class="navbutton">
+      <i class="fas fa-futbol"></i>
+      <h3>Activity</h3>
+    </div>
+
+    <div id="analysisButton" class="navbutton">
+      <i class="fas fa-calculator"></i>
+      <h3>Analysis</h3>
+    </div>
+
+    <div id="signoutButton" class="navbutton">
+      <i class="fas fa-sign-out-alt"></i>
+      <h3>Sign out</h3>
+    </div>
+  </div>
+
+
+
+
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/master.js" charset="utf-8"></script>
+  <script src="js/analysis.js" charset="utf-8"></script>
+
+
+  <script>showPhoto(0);</script>
+</body>
+
+</html>

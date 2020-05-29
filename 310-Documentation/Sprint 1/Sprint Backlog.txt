@@ -1,0 +1,15 @@
+Sprint1 backlog:
+UI mockups
+    User login + sign up + logout
+    Radius input by user
+    Result display
+    Search history
+Setup JDBC
+    Username/password
+    Favorite city
+UI FrontEnd
+    Activity and Vacation Planning page:=
+    Main Search and Analysis page=
+
+We choose to do the UI mockup first in order to get a better understanding of the product backlog. By doing the UI mockup in the sprint we are albe to better communicate with stakeholders to clarify the product details. Also, we choose to setup JDBC with SQL as many of the product backlog requires that.
+// 300 word summary of how these were chosen

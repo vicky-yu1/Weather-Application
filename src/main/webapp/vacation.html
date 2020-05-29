@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Vacation Page</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/vacation.css">
+  <link rel="stylesheet" href="css/login.css" type="text/css" media="all">
+
+  <!-- fontAwesome Icons -->
+  <script src="https://kit.fontawesome.com/5411719270.js" crossorigin="anonymous"></script>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body onload="getLocation()">
+  <span id="tempType" class="tempUnit" style="display: none">F</span>
+  <span id="user" class="user" style="display:none"></span>
+  <span id="lat" style="display: none"></span>
+  <span id="long" style="display: none"></span>
+  <div class="pageTitle">
+    <h1>Vacation Planning</h1>
+  </div>
+
+  <div class="mainContent">
+    <div class="container" id="searchbox">
+      <div class="input_range search_input">
+        <div class="range">
+          <input id="input_range_lower" type="text" name="lower" placeholder="Min Temp"> <a>-</a> <input
+            id="input_range_upper" type="text" name="upper" placeholder="Max temp">
+        </div>
+      </div>
+
+      <input id="input_radius" type="text" placeholder="Enter search radius (in miles)" name="box3">
+
+      <div class="send-button">
+        <input id="find_result" type="button" value="Find my results" name="button">
+      </div>
+      <div id="toggleTempSlider">
+        <a>C°</a> <label class="switch" for="checkbox"> <input type="checkbox" id="checkbox"> <span class="slider round"
+            id="ccToggle"></span>
+          <!--This is the little ball that slides -->
+        </label> <a>F°</a>
+      </div>
+    </div>
+    <div class="container" id="resultbox">
+      <div id="errorMessage"></div>
+      <div class="columnHeadings">
+        <div id="cityHeading" class="rowEntry">City</div>
+        <div id="countryHeading" class="rowEntry">Country</div>
+        <div id="avgMinHeading" class="rowEntry">Avg Min Temp</div>
+        <div id="avgMaxHeading" class="rowEntry">Avg Max Temp</div>
+        <div id="distanceHeading" class="rowEntry">Distance</div>
+        <div id="favoritesHeading" class="rowEntry">Favorites</div>
+        <div id="likesHeading" class="rowEntry">Likes</div>
+      </div>
+      <div id="resultsTable" class="resultsTable">
+
+      </div>
+      <div class="send-button" id="buttons">
+        <input type="button" id="previous" onclick="previousPage()" value="previous" />
+        <div id="pagination"></div>
+        <input type="button" id="next" onclick="nextPage()" value="next" />
+      </div>
+    </div>
+  </div>
+
+  <div class="nav">
+
+    <div id="homeButton" class="navbutton">
+      <i class="fas fa-home"></i>
+      <h3>Home</h3>
+    </div>
+
+    <div id="vacationButton" class="navbutton">
+      <i class="fas fa-umbrella-beach"></i>
+      <h3>Vacation</h3>
+    </div>
+
+    <div id="activityButton" class="navbutton">
+      <i class="fas fa-futbol"></i>
+      <h3>Activity</h3>
+    </div>
+
+    <div id="analysisButton" class="navbutton">
+      <i class="fas fa-calculator"></i>
+      <h3>Analysis</h3>
+    </div>
+
+    <div id="signoutButton" class="navbutton">
+      <i class="fas fa-sign-out-alt"></i>
+      <h3>Sign out</h3>
+    </div>
+  </div>
+
+  <!-- Get user location-->
+  <script>
+    function getLocation() {
+      console.log("Capturing Coordinates in front end")
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        console.log("unable to get location");
+        $("#errorMessage").html(
+          "Geolocation is not supported by this browser.");
+        $("#errorMessage").css(display, block);
+      }
+    }
+
+    function showPosition(position) {
+      $("#lat").html(position.coords.latitude);
+      $("#long").html(position.coords.longitude);
+    }
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="js/master.js" charset="utf-8"></script>
+  <script src="js/vacation.js" charset="utf-8"></script>
+</body>

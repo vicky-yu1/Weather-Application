@@ -1,0 +1,12 @@
+For Sprint#1, our team learned and executed the agile work flow for software engineering process. 
+At first, we met on Zoom to plan the implementation schedule of each requirement in the project 
+backlog and scheduled our following five scrum meeting. In Scrum meeting #1, we assigned task to 
+every team members and set up Trello Broad to keep track of the work process. In all scrum meetings, 
+everyone answered the three questions. Through the structured reporting system, and the update of 
+Trello board, we keep everyone on the same page of the workflow. All scrum meetings are recorded in 
+repo for your reference. Our team also learned and familiar ourselves with the git flow, including 
+branch creation, merge, issue, and pull request. We also set up the development branch has a buffer, 
+so that our unfinished feature would not interfere with the master branch. We implemented some features 
+in Sprint #1, such as Radius Sort, Page Division, Design Mock Up, and login. We believe that we have 
+set up at great model for agile work flow and accomplished the tasks we planned. We will keep up the 
+good work for Sprint#2. Please let us know if there is anything we can improve on.

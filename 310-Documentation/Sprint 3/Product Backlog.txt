@@ -1,0 +1,21 @@
+<<<<<<< HEAD
+1. [20] The application must be secure and protect confidentiality of users’ data.
+2. [15] Maintain users’ information beyond just a single session
+3. [15] View results of prior searches via search history.
+4. [20] User interfaces must look modern and be attractive.
+5. [16] Allow for pagination of results returned by both searches.
+6. [18] Allow cities returned in searches to be ranked by likes.
+7. [16] Set the distance radius of both searches
+=======
+1. The application must be secure and protect confidentiality of users’ data.
+2. Maintain users’ information beyond just a single session
+3. View results of prior searches via search history.
+4. User interfaces must look modern and be attractive.
+5. Allow cities returned in searches to be ranked by likes.
+6. Enhance security by enabling the application to be accessed via HTTPS.
+7. Allow users to "like" cities and enable user to sort search results by likes.
+8. Append a search history bar to the home page that will redisplay weather information upon clicking on a prior search history item.
+9. Change the color scheme of the user interface for more contrast
+10. Store the user's password's as hashes
+11. Enable the user to log out of the application
+>>>>>>> refs/heads/DevelopBranch

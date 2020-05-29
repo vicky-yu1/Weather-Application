@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>Activity Page</title>
+
+<!-- css -->
+<link rel="stylesheet" href="css/master.css">
+<link rel="stylesheet" href="css/activity.css">
+<link rel="stylesheet" href="css/login.css" type="text/css" media="all">
+
+<!-- fontAwesome Icons -->
+<script src="https://kit.fontawesome.com/5411719270.js"
+	crossorigin="anonymous"></script>
+
+</head>
+
+
+<body onload="getLocation()">
+	<span id="tempType" class="tempUnit" style="display: none">F</span>
+	<span id="user" class="user" style="display:none"></span>
+	<span id="lat" style="display: none"></span>
+	<span id="long" style="display: none"></span>
+	<div class="pageTitle">
+		<h1>Activity Planning</h1>
+	</div>
+
+	<div class="mainContent">
+		<div class="container" id="searchbox">
+			<input id="input_activity" placeholder="Enter your activity"
+				type="text" name="box1" list="options">
+			<datalist id="options">
+				<option value='Ice Skating'></option>
+				<option value='Skiing'></option>
+				<option value='Sledding'></option>
+				<option value='Snowboarding'></option>
+				<option value='Snowmobiling'></option>
+				<option value='Tobogganing'></option>
+				<option value='Ice Fishing'></option>
+				<option value='Ice Hockey'></option>
+				<option value='Curling'></option>
+				<option value='Snow Volleyball'></option>
+				<option value='Figure Skating'></option>
+				<option value='Snow Shoeing'></option>
+				<option value='Ski Biking'></option>
+				<option value='Mountaineering'></option>
+				<option value='Snow Tubing'></option>
+				<option value='Hiking'></option>
+				<option value='Camping'></option>
+				<option value='Soccer'></option>
+				<option value='Biking'></option>
+				<option value='Rock Climbing'></option>
+				<option value='Archery'></option>
+				<option value='Cycling'></option>
+				<option value='Volleyball'></option>
+				<option value='Basketball'></option>
+				<option value='Frisbee'></option>
+				<option value='Golf'></option>
+				<option value='Football'></option>
+				<option value='Lacrosse'></option>
+				<option value='Tennis'></option>
+				<option value='Handball'></option>
+				<option value='Dodgeball'></option>
+				<option value='Bungee Jumping'></option>
+				<option value='Ziplining'></option>
+				<option value='Fishing'></option>
+				<option value='Picnic'></option>
+				<option value='Horseback Riding'></option>
+				<option value='Go-Kart'></option>
+				<option value='Running'></option>
+				<option value='Jogging'></option>
+				<option value='Hunting'></option>
+				<option value='Paragliding'></option>
+				<option value='Ballooning'></option>
+				<option value='Hang Gliding'></option>
+				<option value='Parachuting'></option>
+				<option value='Swimming'></option>
+				<option value='Surfing'></option>
+				<option value='Wind Surfing'></option>
+				<option value='Kayaking'></option>
+				<option value='Canoeing'></option>
+				<option value='Sailing'></option>
+				<option value='Paddleboarding'></option>
+				<option value='Water Skiing'></option>
+				<option value='Jet Skiing'></option>
+				<option value='Parasailing'></option>
+				<option value='Rafting'></option>
+				<option value='Rowing'></option>
+				<option value='Wakeboarding'></option>
+				<option value='Snorkeling'></option>
+				<option value='Diving'></option>
+				<option value='Water Polo'></option>
+				<option value='Water Aerobics'></option>
+				<option value='Water Rafting'></option>
+				<option value='Aquajogging'></option>
+				<option value='Kitesurfing'></option>
+
+			</datalist>
+			<input id="input_radius" type="text"
+				placeholder="Enter search radius (in miles)">
+
+			<div class="send-button">
+				<input id="find_result" type="button" value="Find my results"
+					name="button">
+			</div>
+			<div id="toggleTempSlider">
+				<a>C°</a> <label class="switch" for="checkbox"> <input
+					type="checkbox" id="checkbox"> <span class="slider round"
+					id="ccToggle"></span> <!--This is the little ball that slides -->
+				</label> <a>F°</a>
+			</div>
+		</div>
+
+		
+		<div class="container" id="resultbox">
+
+			<div id="errorMessage" style="color:red"></div>
+			<div class="columnHeadings">
+				<div id="cityHeading" class="rowEntry">City</div>
+				<div id="countryHeading" class="rowEntry">Country</div>
+				<div id="currentTempHeading" class="rowEntry">Current Temp</div>
+				<div id="distanceHeading" class="rowEntry">Distance</div>
+				<div id="favoritesHeading" class="rowEntry">Favorites</div>
+				<div id="likesHeading" class="rowEntry">Likes</div>
+			</div>
+			<div id="resultsTable" class="resultsTable"></div>
+			<div class="send-button" id="buttons">
+				<input type="button" id="previous" onclick="previousPage()"
+					value="previous" />
+				<div id="pagination"></div>
+				<input type="button" id="next" onclick="nextPage()" value="next" />
+			</div>
+		</div>
+
+	</div>
+
+	<div class="nav">
+
+		<div id="homeButton" class="navbutton">
+			<i class="fas fa-home"></i>
+			<h3>Home</h3>
+		</div>
+
+		<div id="vacationButton" class="navbutton">
+			<i class="fas fa-umbrella-beach"></i>
+			<h3>Vacation</h3>
+		</div>
+
+		<div id="activityButton" class="navbutton">
+			<i class="fas fa-futbol"></i>
+			<h3>Activity</h3>
+		</div>
+
+		<div id="analysisButton" class="navbutton">
+			<i class="fas fa-calculator"></i>
+			<h3>Analysis</h3>
+		</div>
+
+		<div id="signoutButton" class="navbutton">
+			<i class="fas fa-sign-out-alt"></i>
+			<h3>Sign out</h3>
+		  </div>
+	</div>
+
+
+	<!-- Get user location-->
+	<script>
+		function getLocation() {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showPosition);
+			} else {
+				$("#errorMessage").html(
+						"Geolocation is not supported by this browser.");
+				$("#errorMessage").css(display, block);
+			}
+		}
+
+		function showPosition(position) {
+			console.log("Capturing Coordinate in front end")
+			$("#lat").html(position.coords.latitude);
+			$("#long").html(position.coords.longitude);
+		}
+	</script>
+
+	<!-- jQuery -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/master.js" charset="utf-8"></script>
+	<script src="js/activity.js" charset="utf-8"></script>
+</body>
+
+</html>

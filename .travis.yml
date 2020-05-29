@@ -1,0 +1,14 @@
+language: java
+env:
+  global:
+    NO_GCE_CHECK=true
+    GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/Weather.json
+# blocklist
+branches:
+  except:
+   - master
+
+# safelist
+branches:
+  only:
+  - DevelopBranch

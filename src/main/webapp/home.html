@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Home Page</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/homepage.css">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/login.css" type="text/css" media="all">
+
+  <!-- fontAwesome Icons -->
+  <script src="https://kit.fontawesome.com/5411719270.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <span id="tempType" class="tempUnit" style="display: none">F</span>
+  <span id="user" class="user" style="display:none"></span>
+  <div class="container" id="history">
+    <div class="searchHistory" id="searchHistory"></div>
+  </div>
+  <div class="container"  id="weatherWidget">
+    <div class="weatherWidget">
+      <h2>
+        <span id="cityName">Los Angeles</span>, <span id="date">3/22/2020</span>
+      </h2>
+
+      <div id="weatherIconandTemp">
+        <div>
+          <img id="weatherIcon" src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+        </div>
+        <div>
+          <h2>
+            <span id="tempValue" class="tempValue">87</span> &#176 <span class="tempUnit" id="cctempUnit">F</span>
+          </h2>
+        </div>
+      </div>
+      <h2>
+        <span id="weatherDescription">Sunny</span>
+      </h2>
+    </div>
+  </div>
+  <div class="weatherWidget" id="errorMessage">
+    <h1 id="ccLandingError">No weather data found.</h1>
+  </div>
+
+  <div class="searchControl">
+
+    <div class="searchControlLine1">
+      <input type="text" id="searchQuery" placeholder="Enter Location (city or zip)">
+    </div>
+
+    <div class="searchControlLine2">
+      <div id="toggleTempSlider">
+        <a>C°</a>
+        <label class="switch" for="checkbox"> <input type="checkbox" id="checkbox">
+          <div class="slider round" id="ccToggle"></div>
+          <!--This is the little ball that slides -->
+        </label>
+        <a>F°</a>
+      </div>
+      <div class="send-button"><input type="button" value="Show me the weather" id="SMTWButton"></div>
+    </div>
+
+  </div>
+
+  <div class="nav">
+
+    <div id="homeButton" class="navbutton">
+      <i class="fas fa-home"></i>
+      <h3>Home</h3>
+    </div>
+
+    <div id="vacationButton" class="navbutton" href="vacation.html">
+      <i class="fas fa-umbrella-beach"></i>
+      <h3>Vacation</h3>
+    </div>
+
+    <div id="activityButton" class="navbutton">
+      <i class="fas fa-futbol"></i>
+      <h3>Activity</h3>
+    </div>
+
+    <div id="analysisButton" class="navbutton">
+      <i class="fas fa-calculator"></i>
+      <h3>Analysis</h3>
+    </div>
+
+    <div id="signoutButton" class="navbutton">
+      <i class="fas fa-sign-out-alt"></i>
+      <h3>Sign out</h3>
+    </div>
+  </div>
+
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/homepage.js" charset="utf-8"></script>
+  <script src="js/master.js" charset="utf-8"></script>
+
+</body>
+
+</html>

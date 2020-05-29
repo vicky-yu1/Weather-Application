@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<!-- Head -->
+
+<head>
+
+  <title>Login</title>
+
+  <!-- Meta-Tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <!-- //Meta-Tags -->
+
+  <!-- Style -->
+  <link rel="stylesheet" href="css/login.css" type="text/css" media="all">
+
+</head>
+<!-- //Head -->
+
+<!-- Body -->
+
+<body>
+
+  <span id="user" class="user" style="display:none"></span>
+  <h1>Weather Planning</h1>
+
+  <div class="container">
+    <div class="login">
+      <h2>Sign in</h2>
+      <input type="text" Name="Userame" placeholder="Enter Username" id="username">
+      <input type="password" Name="Password" placeholder="Enter Password" id="password">
+      <div class="errorMsg">
+        <h3 id="errorMsg"></h3>
+      </div>
+      <div class="send-button"><input type="button" value="Log in" id="login"></div>
+      <div class="clear"></div>
+    </div>
+
+    <div class="register">
+      <h2>Register</h2>
+      <input type="text" Name="UserameReg" placeholder="Enter Username" id="usernameReg">
+      <input type="password" Name="PasswordReg" placeholder="Enter Password" id="passwordReg">
+      <input type="password" Name="PasswordCheck" placeholder="Re-Enter Password" id="passwordCheck">
+      <div class="errorMsgReg">
+        <h3 id="errorMsgReg"></h3>
+      </div>
+      <div class="send-button"><input type="button" value="Register" id="register"></div>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/login.js" charset="utf-8"></script>
+
+</body>
+
+</html>

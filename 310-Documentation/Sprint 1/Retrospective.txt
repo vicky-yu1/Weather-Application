@@ -1,0 +1,38 @@
+Meeting Participants:
+Karthik Sivanadiyan
+Vicky Yu
+Rastaar Haghi
+Size Shen
+Zongye Cen
+
+The following process aspects will be changed.
+
+We had lots of overlap in communication (especially the frontend tasks and
+JDBC related issues), so for future Scrums, we are delegating more specifc tasks 
+to each person. Such faulty communication impeded progress on the Sprint 1 
+backlog, thus leaving several features "weakly" implemented for Sprint 2. These 
+"more specific" tasks will be reflected on the task chart, as you can now see 
+more "subtasks" for each larger feature (designated by color code).
+
+We also circumvented the usefulness of designing "comprehensive" 
+frontend/backend tests (key feature of TDD) by writing small, failing tests so 
+that we could jump right into implementation. Doing the "bare minimum" for 
+testing once again impeded our Sprint 1 backlog progress as none of the features
+fully functioned, and several features failed to garner feedback due to failing 
+tests. 
+
+Poor integration of the GIT flow model into eclipse's EGIT functionality caused 
+several version control issues that took away time from implementation. We will 
+not produce any new commits until all members have a fully functional GIT flow 
+model running with eclipse.
+
+Lastly, we will seek approripate technical support (where warranted) for the 
+above process changes from the course producers in a timely manner.
+
+We as a group decided that NO new tasks will be appended to the product backlog. 
+The course producers stated that we have not made enough progress into any of 
+the inital features to garner feedback that entails newer, higher-level tasks 
+significant enough to be placed in the product backlog. Most of our newly 
+generated tasks from the demo are simply small UI changes and small logic 
+changes in our distance radius search and pagination features that do not belong
+in the product backlog.

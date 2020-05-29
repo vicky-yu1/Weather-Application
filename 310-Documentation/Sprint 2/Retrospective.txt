@@ -1,0 +1,51 @@
+Meeting Participants:
+Karthik Sivanadiyan
+Vicky Yu
+Rastaar Haghi
+Size Shen
+Zongye Cen
+
+The following process aspects will be changed.
+
+We struggled to support GitFlow properly with the implementation code again. We 
+spent several hours copying and pasting code files via Slack and 
+constantly overwrote fresh code with older code due to poor merging practices. 
+We have adopted a schedule more apt for the GitFlow model such that at most two 
+members can work on the repository per day. They will constantly communicate 
+changed files over Slack and will commit, merge and push functional, feature 
+related code to the develop branch by the end of the day. The next day, the 
+other team members will pull the fresh develop branch, make a feature branch, 
+commit, merge, and push by end of day, and the cycle repeats. This schedule was 
+adopted given that we are no longer developing large high level features that 
+may require more than 1 day to complete. We are predicting that this rigid 
+schedule will reduce merge conflicts.
+
+We improved the TDD approach for Sprint # 2, but we failed to individually 
+commit the production code into unit test + method shell(s). We also attempted 
+to have one team member write the unit tests for the methods that another team 
+member would implement in an attempt to save time. This went horribly wrong 
+given that the I/O behavior of methods was not clearly communicated amongst team 
+members, causing the test implementor to rewrite the corresponding production 
+code. Our solution is to simply have the feature implementor follow the TDD 
+process for their own feature implementation code.
+
+Improved communication from the previous sprint reduced the amount of 
+implementation code that was "accidentally overlapped" by team members. We make 
+significant progress into all features on the sprint backlog as a result. 
+However, we failed to clearly segregate where members implement the frontend vs. 
+backend code for the login/logout subtask. As a result, Karthik and Size ended 
+up completing the same task with different implementations. Time wasted from 
+this faulty communication impeded progress on other features. After the incident 
+we clearly segregated what portions a features implementation code constitute 
+the frontend v.s. the backend to reduce overlap.
+
+We predict that we have garnered all the required feedback for each high level 
+feature from the Sprint review demonstration. The following tasks will be added 
+to the product backlog:
+8. Enhance security by enabling the application to be accessed via HTTPS.
+9. Allow users to "like" cities and enable user to sort search results by likes.
+10. Append a search history bar to the home page that will redisplay weather 
+information upon clicking on a prior search history item.
+11. Change the color scheme of the user interface for more contrast
+12. Store the user's password's as hashes
+13. Enable the user to log out of the application

@@ -1,0 +1,27 @@
+Meeting Participants:
+Karthik Sivanadiyan
+Vicky Yu
+Rastaar Haghi
+Size Shen
+Zongye Cen
+
+Sprint Backlog Items:
+1. [20] The application must be secure and protect confidentiality of users’ 
+data.
+2. [15] Maintain users’ information beyond just a single session
+3. [15] View results of prior searches via search history.
+4. [20] User interfaces must look modern and be attractive.
+5. [16] Allow for pagination of results returned by both searches.
+6. [18] Allow cities returned in searches to be ranked by likes.
+7. [16] Set the distance radius of both searches
+
+We have appended all the features not attempted from sprint # 1's backlog 
+because our stakeholders (CSCI 310 course producers) strongly suggested we
+make progress on ALL items in the product backlog to get specific feedback 
+regarding each requirement. We were unable to remove any features also present 
+in sprint # 1's backlog because they are all yet to be fully completed, though 
+we did gain valuable feed back on what those features entailed during the demo 
+and are close to completing the distance radius search, pagination, and user 
+interface features (# 4, 5, 7). Technical difficulties with setting up 
+the SQL database impeded progress on features 2, 3, and 6, but those 
+difficulties are resolved now. 
